@@ -11,6 +11,6 @@ app.route('/api/build')
 app.route('/api/scoreboard')
   .get(scoreApi.getByProject);
 
-app.listen(process.env.PORT || 3000, function() {
-  console.log('server listening');
+var server = app.listen(process.env.PORT || 3000, function() {
+  console.log('listening on port %d', server.address().port);
 });
