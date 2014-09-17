@@ -1,7 +1,7 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   buildApi = require('./routes/api/build'),
-  scoreApi = require('./routs/api/score');
+  scoreApi = require('./routes/api/score');
 
 var app = express();
 
@@ -11,6 +11,6 @@ app.route('/api/build')
 app.route('/api/scoreboard')
   .get(scoreApi.getByProject);
 
-app.listen(process.end.PORT || 3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log('server listening');
 });
