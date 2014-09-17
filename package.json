@@ -1,0 +1,14 @@
+{
+  "name": "scoreboard",
+  "version": "0.1.0",
+  "description": "webhooks to keep track of deviant developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Norris <rnorris@medullan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.9.1"
+  }
+}
