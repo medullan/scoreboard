@@ -4,8 +4,8 @@
   "description": "webhooks to keep track of deviant developers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node index.js"
+  }
   "author": "Ryan Norris <rnorris@medullan.com>",
   "license": "MIT",
   "dependencies": {
