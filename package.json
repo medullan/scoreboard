@@ -9,6 +9,7 @@
   "author": "Ryan Norris <rnorris@medullan.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "~4.9.1"
+    "express": "~4.9.1",
+    "body-parser": "~1.8.2"
   }
 }
