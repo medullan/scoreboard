@@ -1,5 +1,7 @@
 module.exports = {
   create: function(req, res) {
-    console.log(req.body);
+    res.type('application/json');
+    res.status('200');
+    res.send({ status: 'ok '});
   }
 };

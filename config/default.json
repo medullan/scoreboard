@@ -1,0 +1,15 @@
+{
+  "database": {
+    "username": "rnorris",
+    "password": null,
+    "name": "scoreboard_development",
+    "options": {
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "define": {
+        "underscored": true,
+        "freezeTableName": true
+      }
+    }
+  }
+}
