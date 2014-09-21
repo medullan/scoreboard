@@ -1,6 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('ProjectDimension', {
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     codeship_project_id: DataTypes.INTEGER,
     codeship_project_name:  DataTypes.STRING
   }, {

@@ -23,9 +23,12 @@ models.forEach(function(model) {
 
 // describe relationships
 (function(m) {
-  m.UserDimension.belongsTo(m.ScoreboardFact);
-  m.TimeDimension.belongsTo(m.ScoreboardFact);
-  m.ProjectDimension.belongsTo(m.ScoreboardFact);
+  m.ScoreboardFact.hasMany(m.UserDimension);
+  m.ScoreboardFact.hasMany(m.ProjectDimension);
+  m.ScoreboardFact.hasMany(m.TimeDimension);
+  m.UserDimension.belongsTo(m.ScoreboardFact, { as : 'user' });
+  m.TimeDimension.belongsTo(m.ScoreboardFact, { as : 'time' });
+  m.ProjectDimension.belongsTo(m.ScoreboardFact, { as : 'project' });
 })(module.exports);
 
 // export connection

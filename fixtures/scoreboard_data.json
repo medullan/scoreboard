@@ -2,7 +2,6 @@
   {
     "model": "TimeDimension",
     "data": {
-      "id": 1,
       "month": 6,
       "day": 28,
       "year": 2014
@@ -11,7 +10,6 @@
   {
     "model": "ProjectDimension",
     "data": {
-      "id": 1,
       "codeship_project_id": 1000,
       "codeship_project_name": "sample/sample"
     }
@@ -19,24 +17,27 @@
   {
     "model": "UserDimension",
     "data": {
-      "id": 1,
       "github_username": "johndoe"
     }
   },
   {
     "model": "UserDimension",
     "data": {
-      "id": 2,
       "github_username": "janedoe"
     }
   },
   {
     "model": "ScoreboardFact",
     "data": {
-      "id": 1,
-      "time_id": 1,
-      "project_id": 1,
-      "user_id": 1,
+      "time": {
+        "month": 6, "day": 28, "year": 2014
+      },
+      "project": {
+        "codeship_project_id": 1000
+      },
+      "user": {
+        "github_username": "johndoe"
+      }
       "breaks_count": 3,
       "success_count": 5
     }
@@ -44,10 +45,15 @@
   {
     "model": "ScoreboardFact",
     "data": {
-      "id": 2,
-      "time_id": 1,
-      "project_id": 1,
-      "user_id": 2,
+      "time": {
+        "month": 6, "day": 28, "year": 2014
+      },
+      "project": {
+        "codeship_project_id": 1000
+      },
+      "user": {
+        "github_username": "janedoe"
+      }
       "breaks_count": 1,
       "success_count": 3
     }

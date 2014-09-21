@@ -64,8 +64,16 @@ module.exports = {
         references: 'user_dim',
         referenceKey: 'id'
       },
-      breaks_count: DataTypes.INTEGER,
-      success_count: DataTypes.INTEGER
+      breaks_count: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      success_count: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      }
     });
 
     // add altering commands here, calling 'done' when finished
@@ -76,6 +84,7 @@ module.exports = {
     migration.dropTable('user_dim');
     migration.dropTable('time_dim');
     migration.dropTable('project_dim');
-    done()
+    
+    done();
   }
 }

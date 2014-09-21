@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     mochaTest: {
       unit: {
         options: {
-          reporter: 'tap'
+          reporter: 'list'
         },
         src: [ 'test/unit/**/*.js' ]
       }
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('prepare', []);
   grunt.registerTask('build', ['sequelize:migrate']);
-  grunt.registerTask('clean', ['sequelize:undo']);
-  grunt.registerTask('test', ['fixtures:importTestData', 'mochaTest:unit']);
+  // grunt.registerTask('clean', ['sequelize:undo']); // TODO undo doesn't appear to work in the NPMd version of this task
+  grunt.registerTask('test', ['mochaTest:unit']);
   grunt.registerTask('install', ['prepare', 'build', 'test']);
 };

@@ -1,10 +1,20 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('ScoreboardFact', {
-    project_id: DataTypes.INTEGER,
-    time_id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER,
-    breaks_count: DataTypes.INTEGER,
-    success_count: DataTypes.INTEGER
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    breaks_count: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
+    },
+    success_count: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
+    }
   }, {
     timestamps: false,
     tableName: 'scores_fact'

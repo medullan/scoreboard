@@ -6,6 +6,8 @@
     "options": {
       "host": "127.0.0.1",
       "dialect": "postgres",
+      "omitNull": true,
+      "logging": true,
       "define": {
         "underscored": true,
         "freezeTableName": true
